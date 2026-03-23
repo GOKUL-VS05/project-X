@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cross Device</string>
+    <string name="main_title">Cross Device Android</string>
+    <string name="main_subtitle">Connect to the backend and start mobile screen sharing.</string>
+    <string name="start_capture">Start Screen Capture</string>
+    <string name="connect_socket">Connect to Backend</string>
+    <string name="capture_status_idle">Status: Idle</string>
+    <string name="capture_status_requesting">Status: Requesting screen capture permission...</string>
+    <string name="capture_status_started">Status: Screen sharing active.</string>
+    <string name="capture_status_cancelled">Status: Screen capture permission was denied or cancelled.</string>
+    <string name="capture_status_socket">Status: Connected to %1$s</string>
+    <string name="capture_status_control">Status: Remote control message received: %1$s</string>
+    <string name="server_url">http://192.168.1.5:5000</string>
+    <string name="help_text">Set the backend IP in local.properties, then run this app on the same network as your backend server.</string>
+</resources>

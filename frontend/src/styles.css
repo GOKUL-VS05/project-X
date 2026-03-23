@@ -1,0 +1,280 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", sans-serif;
+  --bg: #f3efe7;
+  --panel: rgba(255, 255, 255, 0.82);
+  --panel-strong: #ffffff;
+  --ink: #1f2937;
+  --muted: #5f6b7a;
+  --accent: #0f766e;
+  --accent-deep: #134e4a;
+  --line: rgba(31, 41, 55, 0.08);
+  --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(234, 88, 12, 0.12), transparent 24%),
+    linear-gradient(180deg, #f7f3ec 0%, #eef6f4 100%);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+.file-input {
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.file-input:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(15, 118, 110, 0.2);
+}
+
+button {
+  margin-top: 12px;
+  padding: 12px 18px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#root,
+.app-shell {
+  min-height: 100vh;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 32px;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.nav__brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav__link--active {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-deep);
+}
+
+.page-shell,
+.container,
+.auth-page {
+  padding: 32px;
+}
+
+.auth-page {
+  display: grid;
+  place-items: center;
+}
+
+.auth-card,
+.panel,
+.hero-card,
+.device-card,
+.qr-card {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.auth-card,
+.panel {
+  width: min(100%, 560px);
+  padding: 28px;
+  border-radius: 24px;
+}
+
+.auth-card h1,
+.hero-card h2,
+.panel h2 {
+  margin: 0 0 10px;
+}
+
+.auth-copy,
+.muted-text,
+.device-card p,
+.qr-card p {
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 28px;
+}
+
+.qr-card {
+  min-width: 230px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 22px;
+  background: var(--panel-strong);
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.device-card {
+  padding: 22px;
+  border-radius: 22px;
+}
+
+.device-card__badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.mirror-video,
+.signal-box {
+  width: 100%;
+  margin-top: 18px;
+  border-radius: 18px;
+  background: #0f172a;
+}
+
+.mirror-video {
+  min-height: 320px;
+}
+
+.signal-box {
+  min-height: 180px;
+  color: #d1fae5;
+}
+
+.clip-history {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clip-history li {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+}
+
+.clip-history li + li {
+  margin-top: 10px;
+}
+
+.file-input {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 18px;
+  margin-top: 10px;
+}
+
+.file-input input {
+  display: none;
+}
+
+.error-text {
+  color: #b91c1c;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .nav,
+  .page-shell,
+  .container,
+  .auth-page {
+    padding: 20px;
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qr-card {
+    width: 100%;
+    min-width: 0;
+  }
+}
